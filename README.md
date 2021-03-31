@@ -12,16 +12,18 @@ As I highlight above there are **3 task-specific and some addional concepts** to
 1. [**link**](#link)
 1. [**site**](#site)
 1. [**registrable domain**](#registrable-domain)
+1. [**public suffix**](#public-suffix)
+1. [**top level domain**](#top-level-domain)
 
 #### website
 String that specifies web resource on the internet, i.e. [URL](#url)
 
 #### url
-[MDN url definition][mdn_url]
+[MDN Url Definition][mdn_url]
 > Uniform Resource Locator (URL) is a text string that specifies where a resource (such as a web page, image, or video) can be found on the Internet.
 
 #### link
-[WHATWG link definition][whatwg_link]
+[WHATWG Link Definition][whatwg_link]
 > Links are a conceptual construct, created by **a, area, form, and link elements**, that represent a connection between two resources, one of which is the current Document. There are two kinds of links in HTML:
 
 > **Links to external resources**
@@ -33,12 +35,24 @@ String that specifies web resource on the internet, i.e. [URL](#url)
 >These are links to other resources that are generally exposed to the user by the user agent so that the user can cause the user agent to navigate to those resources, e.g. to visit them in a browser or download them.
 
 #### site
-[MDN site definition][mdn_site]
+[MDN Site Definition][mdn_site]
 > The site of a piece of web content is determined by the [registrable domain](#registrable-domain) of the host within the origin. This is computed by consulting a Public Suffix List to find the portion of the host which is counted as the public suffix (e.g. com, org or co.uk).
 
 #### registrable domain
-[WHATWG registrable domain definition][whatwg_registrable_domain]
-> A host’s registrable domain is a domain formed by the most specific public suffix, along with the domain label immediately preceding it, if any. To obtain host’s registrable domain, run these steps:
+[WHATWG Registrable Domain Definition][whatwg_registrable_domain]
+> A host’s registrable domain is a domain formed by the most specific [public suffix](#public-suffix), along with the domain label immediately preceding it, if any. To obtain host’s registrable domain, run these steps:
+
+#### public suffix
+[WHATWG Public Suffix definition](whatwg_public_suffix)
+> A host’s public suffix is the portion of a host which is included on the Public Suffix List.
+
+See List under the [publicsuffix.org](publicsuffix.org)
+
+#### top level domain
+[MDN Top Level Domain Definition][mdn_tld]
+> A TLD (top-level domain) is the most generic domain in the Internet's hierarchical DNS (domain name system). A TLD is the final component of a domain name, for example, "org" in developer.mozilla.org.
+
+See [ICANN Top-Level Domains][icann_tld]
 
 ## Considerations
 1.
@@ -64,10 +78,16 @@ String that specifies web resource on the internet, i.e. [URL](#url)
     external resporces, to get their status codes, or we need only
     to traverse givent [site](#site) urls? Although it's a question, it can be toggled
     all with just one flag, so we skip this question.
-
+1.
+    If provided webpage (i.e. initial [url](#url)) not belongs to a valid [site](#site),
+    or as exception for development, to localhost, process of traversing will fail on startup.
 
 [mdn_url]: https://developer.mozilla.org/en-US/docs/Glossary/URL
 [mdn_site]: https://developer.mozilla.org/en-US/docs/Glossary/Site
+[mdn_tld]: https://developer.mozilla.org/en-US/docs/Glossary/TLD
 [whatwg_registrable_domain]: https://url.spec.whatwg.org/#host-registrable-domain
 [whatwg_link]: https://html.spec.whatwg.org/multipage/links.html#links
+[whatwg_public_suffix]: https://url.spec.whatwg.org/#host-public-suffix
+[publicsuffix.org]: https://publicsuffix.org/
+[icann_tld]: https://www.icann.org/resources/pages/tlds-2012-02-25-en
 [MDN]: https://developer.mozilla.org/

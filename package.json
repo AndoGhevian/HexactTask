@@ -2,11 +2,11 @@
   "name": "hexact-task",
   "version": "1.0.0",
   "description": "Link Traversion Script",
-  "main": "index.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --watch ./fakeServer ./fakeServer/index.js",
+    "server": "nodemon --watch fakeServer fakeServer/index.js",
+    "dev": "nodemon scripts/lib/traverse/index.js",
     "traverse": "./scripts/bin/traverse"
   },
   "keywords": [],

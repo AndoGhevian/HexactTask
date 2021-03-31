@@ -6,15 +6,26 @@ const cheerio = require('cheerio')
 
 const [
     , ,
-    site = 'http://localhost:8000',
+    site = 'http://a',
 ] = process.argv
 
-const runIt = async () => {
-    const home = await axios.get(site, {
-        
-    })
-    console.log(home.data)
+runIt(site)
+
+
+async function runIt(site) {
+    // const home = await axios.get(site)
+    // console.log(home.data)
     // const $ = cheerio.load()
 }
 
-runIt()
+
+const parseUrl = (url) => {
+    const obj = new URL(url)
+    const [
+        
+    ] = obj.hostname.split('.').reverse()
+    console.log(obj.hostname)
+    for(const val of )
+}
+
+parseUrl('https://測試.com')
