@@ -43,10 +43,10 @@ String that specifies web resource on the internet, i.e. [URL](#url)
 > A host’s registrable domain is a domain formed by the most specific [public suffix](#public-suffix), along with the domain label immediately preceding it, if any. To obtain host’s registrable domain, run these steps:
 
 #### public suffix
-[WHATWG Public Suffix definition](whatwg_public_suffix)
+[WHATWG Public Suffix definition][whatwg_public_suffix]
 > A host’s public suffix is the portion of a host which is included on the Public Suffix List.
 
-See List under the [publicsuffix.org](publicsuffix.org)
+See List under the [publicsuffix.org][publicsuffix.org]
 
 #### top level domain
 [MDN Top Level Domain Definition][mdn_tld]
