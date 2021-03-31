@@ -1,7 +1,7 @@
 {
   "name": "hexact-task",
   "version": "1.0.0",
-  "description": "Link Traversion Script",
+  "description": "Simple Web Crawler",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
