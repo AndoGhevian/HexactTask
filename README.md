@@ -8,6 +8,7 @@ P.S. scan the whole site, not just the home page
 ## Concepts
 As I highlight above there are **3 task-specific and some addional concepts** to specify and keep in mind while designing and implementing solution for the task
 1. [**website**](#website)
+1. [**webpage**](#webpage)
 1. [**url**](#url)
 1. [**link**](#link)
 1. [**site**](#site)
@@ -16,7 +17,19 @@ As I highlight above there are **3 task-specific and some addional concepts** to
 1. [**top level domain**](#top-level-domain)
 
 #### website
-String that specifies web resource on the internet, i.e. [URL](#url)
+String that identifies on the internet group of [webpages](#webpage) and shared
+between them, i.e. domain, but in this case we will consider any [URL](#url)
+that identifies [webpage](#webpage). This spesification is rephrased based on the task requirements.
+
+For original website term definition see - [MDN Website Definition][mdn_website]
+
+#### webpage
+[MDN Webpage Definition][mdn_webpage]
+> A web page is a simple document displayable by a browser. Such documents are written in the HTML language. A web page can embed a variety of different types of resources such as: style information, scripts, media.
+
+> Note: Browsers can also display other documents such as PDF files or images, but the term web page specifically refers to HTML documents. Otherwise, we only use the term document.
+
+We will use this note as a basis for further reasoning
 
 #### url
 [MDN Url Definition][mdn_url]
@@ -71,18 +84,32 @@ See [ICANN Top-Level Domains][icann_tld]
     path** to the actual recourse, and not only the links.
 
 1.
-    In this case(See abolve), when considering all urls reachable from the given entry point, this requirement of:
+    In this case(See abolve), when considering all [urls](#url) reachable from the given entry point([website](#website)), this requirement of:
     > display all the **URLs** of this site with status codes
 
     Is misleading. So do we need to traverse at least one level for
     external resporces, to get their status codes, or we need only
     to traverse givent [site](#site) urls? Although it's a question, it can be toggled
     all with just one flag, so we skip this question.
-1.
-    If provided webpage (i.e. initial [url](#url)) not belongs to a valid [site](#site),
-    or as exception for development, to localhost, process of traversing will fail on startup.
+
+Now, taking into account the aforesaid we will rephrase the task.
+
+## Rephrased Task
+Given a [url](#url) of a static [webpage](#webpage), you need to deep traverse all endpoints([urls](#url)) of an application, reachable via [links](#link) from it or from subsequent linked [webpages](#webpage) which are the [same site](#site), including
+all [urls](#url) in the middle of redirection paths, in case if they occure, i.e.
+not only [urls](#url) that are directly reachable by [links](#link). 
+
+1. [URL](#url) considered  to belong to the application if it belongs
+to the [same site](#site) as the initial entry point([url](#url)) to the application.
+1. Process must stop subsequent traversing for the [urls](#url) that are not
+[same site](#site) as entry point [url](#url)
+
+If provided webpage (i.e. initial [url](#url)) not belongs to a valid [site](#site),
+or as exception for development, to localhost, process of traversing will fail on startup.
 
 [mdn_url]: https://developer.mozilla.org/en-US/docs/Glossary/URL
+[mdn_website]: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines#web_site
+[mdn_webpage]: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines#web_page
 [mdn_site]: https://developer.mozilla.org/en-US/docs/Glossary/Site
 [mdn_tld]: https://developer.mozilla.org/en-US/docs/Glossary/TLD
 [whatwg_registrable_domain]: https://url.spec.whatwg.org/#host-registrable-domain

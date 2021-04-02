@@ -14,6 +14,7 @@ app.get('/', (_, res) => {
     <div>
         <a href="/blog">/blog</a>
         <a href="https://github.com/AndoGhevian/CustomNumberSystem">https://github.com/AndoGhevian/CustomNumberSystem</a>
+        <a href="http://yandex.ru">/http://yandex.ru -> redirect to -> https://yandex.ru</a>
         
         <a href="${ORIGIN}/query">${ORIGIN}/query</a>
         <a href="/query">/query</a>
