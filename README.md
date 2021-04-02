@@ -30,8 +30,7 @@ For original website term definition see - [MDN Website Definition][mdn_website]
 
 > Note: Browsers can also display other documents such as PDF files or images, but the term web page specifically refers to HTML documents. Otherwise, we only use the term document.
 
-Regarding the document type which represents a webpage, we will consider **HTML** as in this
-MDN Learn page noted, and [XHTML](#xhtml) which is also parsable by **text/html Parsers**, although with some drawbacks.
+Regarding the document type which represents a webpage, we will consider **HTML** as in this MDN page noted, and [XHTML](#xhtml) which is also parsable by **text/html Parsers**, although with some drawbacks.
 
 
 #### url
