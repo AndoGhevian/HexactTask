@@ -15,6 +15,7 @@ As I highlight above there are **3 task-specific and some addional concepts** to
 1. [**registrable domain**](#registrable-domain)
 1. [**public suffix**](#public-suffix)
 1. [**top level domain**](#top-level-domain)
+1. [**xhtml**](#xhtml)
 
 #### website
 String that identifies on the internet group of [webpages](#webpage) and shared
