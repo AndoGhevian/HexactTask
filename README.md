@@ -75,7 +75,7 @@ See [ICANN Top-Level Domains][icann_tld]
 
 Well XHTML is, theoretically, **HTML4** expressed as **XML**. So we **can, and will** handle it with
 **HTML Parser** in order not to miss any links that may be omited in case if it express invalid
-**XML**, in which case will simply stop parsing and produce errors while handled by **XML Parser**
+**XML**, in which case will simply stop parsing and produce errors while handled by **XML Parsers**
 
 > W3C: It is intended to be used as a language for content that is both XML-conforming and, if some simple guidelines are followed, operates in HTML 4 conforming user agents.
 
@@ -120,6 +120,13 @@ So when we
     Well, in my solution I omit handling of **scripts**, because in this case
     It will be necessary to provide a WHATWG [DOM][whatwg_dom] and [HTML][whatwg_html5] Standards, for use with Node.js or use some kind of browser automation tool, I think it will be overhealm for a script, with such a simple use cases, even if not in terms of resources used, but in terms of interface, and method of use.
 
+    Script execution also has **security impacts**. It require strongly implemented
+    sandbox, so that scripts cant access anything outside it. Even a popular
+    and well maintained library [jsdom][jsdom] is not guaranty that it is secure:
+    [NPM JsDom Executing scripts][jsdom_executing_scripts]
+    > The jsdom sandbox is not foolproof, and code running inside the DOM's 
+    script tags can, if it tries hard enough, get access to the Node.js environment, and thus to your machine. As such, the ability to execute scripts embedded in the HTML is disabled by default.
+
     So it can be used with any website, but not in terms of execution of a scripts. So **SPA-s**
     may not be handled as expected, if they not leverage **Server-side rendering**.
 1.
@@ -132,17 +139,19 @@ So when we
 Now, taking into account the aforesaid we will rephrase the task.
 
 ## Rephrased Task
-Given a [url](#url) of a [webpage](#webpage), you need to deep traverse all endpoints([urls](#url)) of an application, reachable via [links](#link) - from it, or from subsequent linked [webpages](#webpage) which are the [same site](#site).
+Given a [url](#url) of a [webpage](#webpage), you need to deep traverse all endpoints([urls](#url)) of an application, reachable via [links](#link) - from it, or from subsequent linked [webpages](#webpage), which are the [same site](#site).
 
 1. [URL](#url) called reachable via link if it directly indicates that [url](#url) as destination, or if that [url](#url) is encountered during **subsequent redirections path** arise during transition by the link.
 1. [URL](#url) considered  to belong to the application if it belongs
 to the [same site](#site) as the initial entry point([url](#url)) to the application.
 1. Process must stop subsequent traversing for the [urls](#url) that are not
-[same site](#site) as entry point [url](#url)
+[same site](#site) as entry point [url](#url).
 
 If provided webpage (i.e. initial [url](#url)) not belongs to a valid [site](#site),
 or as exception for development, to localhost, process of traversing will fail on startup.
 
+[jsdom_executing_scripts]: https://github.com/jsdom/jsdom#executing-scripts
+[jsdom]: https://www.npmjs.com/package/jsdom
 [mdn_url]: https://developer.mozilla.org/en-US/docs/Glossary/URL
 [mdn_website]: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines#web_site
 [mdn_xhtml]: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/XHTML
