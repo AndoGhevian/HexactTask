@@ -37,6 +37,16 @@ Regarding the document type which represents a webpage, we will consider **HTML*
 [MDN Url Definition][mdn_url]
 > Uniform Resource Locator (URL) is a text string that specifies where a resource (such as a web page, image, or video) can be found on the Internet.
 
+Regarding the **Fragment Identifiers**, in practice they not change the actual
+resource. And taking into account 3 main ways of usage from **W3C** best practices
+page:
+> Fragment identifiers within URIs are used in three main ways:
+> - to jump to, highlight, or zoom in to a particular piece of content when displaying a larger document
+> - to identify a piece of content for extraction, for example for embedding within another document
+> - to provide an identifier for either a piece of content or something described within a document that can be used as the basis of annotation
+
+We will consider that [urls](#url) that differ only in **Fragment Identifiers** are the same.
+
 #### link
 [WHATWG Link Definition][whatwg_link]
 > Links are a conceptual construct, created by **a, area, form, and link elements**, that represent a connection between two resources, one of which is the current Document. There are two kinds of links in HTML:

@@ -11,15 +11,18 @@ app.use(express.static(path.resolve(__dirname, './layout')))
 app.get('/', (_, res) => {
     res.send(`
     <link rel="stylesheet" href="/styles.css">
+    <h1 name="H1">Fragment Identifier #H1</h1>
     <div>
+        <a href="#H1">#H1</a>
         <a href="/blog">/blog</a>
+        <a href="/blog#H1">/blog#H1</a>
         <a href="https://github.com/AndoGhevian/CustomNumberSystem">https://github.com/AndoGhevian/CustomNumberSystem</a>
         <a href="http://yandex.ru">http://yandex.ru -> redirect to -> https://yandex.ru</a>
         
         <a href="${ORIGIN}/query">${ORIGIN}/query</a>
         <a href="/query">/query</a>
-        <a href="/query/param1=p1&param2=p2">/query/param1=p1&param2=p2</a>
-        <a href="/query/param2=p1&param1=p2">/query/param1=p1&param2=p2</a>
+        <a href="/query?param1=p1&param2=p2">/query?param1=p1&param2=p2</a>
+        <a href="/query?param2=p1&param1=p2">/query?param2=p1&param1=p2</a>
 
         <a href="/redirect">/redirect</a>
 
@@ -32,6 +35,7 @@ app.get('/', (_, res) => {
 app.get('/blog', (_, res) => {
     res.send(`
         <link rel="stylesheet" href="/styles.css">
+        <h1 name="H1">Fragment Identifier #H1</h1>
         <a href="${ORIGIN}/about">${ORIGIN}/about</a>
     `)
 })
