@@ -160,6 +160,22 @@ to the [same site](#site) as the initial entry point([url](#url)) to the applica
 If provided webpage (i.e. initial [url](#url)) not belongs to a valid [site](#site),
 or as exception for development, to localhost, process of traversing will fail on startup.
 
+## Usage
+Simply type `npx path/to/the/project [website-url]`
+
+**website-url** is optional, By default traverse script will look for server on
+http://localhost:8000.
+
+Examples:
+From within the **Root Directory** of the project
+1. `npx . http://procatinator.com/`
+1. You can also run simple development server `npm run server`, and run script
+   `npx .`
+
+> NOTE: Currently script will traverse one level for external links.
+
+![Image Of Hexact Traversing Result](https://github.com/AndoGhevian/HexactTask/tree/master/images/heaxact.png)
+
 [jsdom_executing_scripts]: https://github.com/jsdom/jsdom#executing-scripts
 [jsdom]: https://www.npmjs.com/package/jsdom
 [mdn_url]: https://developer.mozilla.org/en-US/docs/Glossary/URL
