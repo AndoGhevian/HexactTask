@@ -157,9 +157,6 @@ to the [same site](#site) as the initial entry point([url](#url)) to the applica
 1. Process must stop subsequent traversing for the [urls](#url) that are not
 [same site](#site) as entry point [url](#url).
 
-If provided webpage (i.e. initial [url](#url)) not belongs to a valid [site](#site),
-or as exception for development, to localhost, process of traversing will fail on startup.
-
 ## Usage
 Simply type `npx path/to/the/project [website-url]`
 
@@ -174,7 +171,7 @@ From within the **Root Directory** of the project
 
 > NOTE: Currently script will traverse one level for external links.
 
-![Image Of Hexact Traversing Result](https://github.com/AndoGhevian/HexactTask/tree/master/images/heaxact.png)
+![Image Of Hexact Traversing Result](https://github.com/AndoGhevian/HexactTask/blob/master/images/hexact.png)
 
 [jsdom_executing_scripts]: https://github.com/jsdom/jsdom#executing-scripts
 [jsdom]: https://www.npmjs.com/package/jsdom
