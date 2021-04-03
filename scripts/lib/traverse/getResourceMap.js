@@ -58,7 +58,7 @@ async function getResource(urlNormObj, site, map) {
                 ]
             }
         })
-
+        
         if (redirectionInterrupted) return map
 
         if (outOfSite) {

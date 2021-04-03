@@ -169,7 +169,8 @@ From within the **Root Directory** of the project
 1. You can also run simple development server `npm run server`, and run script
    `npx .`
 
-> NOTE: Currently script will traverse one level for external links.
+> NOTE: Currently script will traverse one level for external links. And there
+is no batch processing. Sorry about that.
 
 ![Image Of Hexact Traversing Result](https://github.com/AndoGhevian/HexactTask/blob/master/images/hexact.png)
 
