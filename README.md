@@ -164,7 +164,6 @@ Simply type `npx https://github.com/AndoGhevian/HexactTask [website-url]`
 http://localhost:8000.
 
 Examples:
-From within the **Root Directory** of the project
 1. `npx https://github.com/AndoGhevian/HexactTask http://procatinator.com/`
 1. You can also run simple development server if you already have installed
 project: `npm run server`, and run script
