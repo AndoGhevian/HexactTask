@@ -4,7 +4,7 @@
   "description": "Simple Web Crawler",
   "bin": {
     "traverse": "./scripts/lib/traverse/index.js",
-    "traverse-stream": "./scripts/lib/traverse-stream/index.js"
+    "traverse-stream": "./scripts/lib/traverseStream/index.js"
   },
   "private": true,
   "scripts": {
