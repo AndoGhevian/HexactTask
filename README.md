@@ -158,19 +158,21 @@ to the [same site](#site) as the initial entry point([url](#url)) to the applica
 [same site](#site) as entry point [url](#url).
 
 ## Usage
-Simply type `npx path/to/the/project [website-url]`
+Simply type `npx https://github.com/AndoGhevian/HexactTask [website-url]`
 
 **website-url** is optional, By default traverse script will look for server on
 http://localhost:8000.
 
 Examples:
 From within the **Root Directory** of the project
-1. `npx . http://procatinator.com/`
-1. You can also run simple development server `npm run server`, and run script
-   `npx .`
+1. `npx https://github.com/AndoGhevian/HexactTask http://procatinator.com/`
+1. You can also run simple development server if you already have installed
+project: `npm run server`, and run script
+   `npx https://github.com/AndoGhevian/HexactTask`
 
-> NOTE: Currently script will traverse one level for external links. And there
-is no batch processing. Sorry about that.
+> NOTE: Currently script will traverse one level for external links. 
+
+There is available new **stream based solution**. See - [https://github.com/AndoGhevian/HexactTask/tree/stream-solution](https://github.com/AndoGhevian/HexactTask/tree/stream-solution)
 
 ![Image Of Hexact Traversing Result](https://github.com/AndoGhevian/HexactTask/blob/master/images/hexact.png)
 

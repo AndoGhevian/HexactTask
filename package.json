@@ -2,15 +2,19 @@
   "name": "hexact-task",
   "version": "1.0.0",
   "description": "Simple Web Crawler",
-  "bin": "./scripts/bin/traverse",
+  "bin": "./scripts/lib/traverse/index.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon --watch fakeServer fakeServer/index.js",
-    "dev": "nodemon scripts/lib/traverse/index.js",
     "traverse": "./scripts/bin/traverse"
   },
-  "keywords": [],
+  "keywords": [
+    "crawler",
+    "web",
+    "url",
+    "link"
+  ],
   "author": "Ando",
   "license": "ISC",
   "dependencies": {
