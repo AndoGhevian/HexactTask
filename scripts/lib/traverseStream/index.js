@@ -2,7 +2,7 @@
 
 const Table = require('cli-table')
 
-const getResourceMap = require('./getResourceMap')
+const getResourceGenerator = require('./getResourceGenerator')
 
 
 const [
@@ -13,7 +13,7 @@ const [
 runIt(website)
 
 async function runIt(website) {
-    const urlCodeMap = await getResourceMap(website)
+    const urlCodeGen = getResourceGenerator(website)
     const codeCountMap = new Map()
 
 
@@ -26,8 +26,9 @@ async function runIt(website) {
         colWidths: [13, 10],
     })
 
-    
-    for (const urlCodePair of urlCodeMap) {
+
+    for await (const urlCodePair of urlCodeGen) {
+        console.log(urlCodePair)
         urlCodeTable.push(urlCodePair)
 
         const code = urlCodePair[1]
@@ -37,7 +38,7 @@ async function runIt(website) {
         codeCountMap.set(code, count + 1)
     }
 
-    for(const codeCountPair of codeCountMap) {
+    for (const codeCountPair of codeCountMap) {
         codeCountTable.push(codeCountPair)
     }
 
