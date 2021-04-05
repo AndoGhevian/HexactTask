@@ -2,7 +2,6 @@
   "name": "hexact-task",
   "version": "1.0.0",
   "description": "Simple Web Crawler",
-  "main": "./scripts/lib/traverse/index.js",
   "bin": {
     "1": "./scripts/lib/traverseStream/index.js",
     "traverse": "./scripts/lib/traverse/index.js",
@@ -12,11 +11,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon --watch fakeServer fakeServer/index.js",
-    "dev": "nodemon scripts/lib/traverse/index.js",
     "traverse": "./scripts/bin/traverse",
     "traverse-stream": "./scripts/bin/traverse-stream"
   },
-  "keywords": [],
+  "keywords": [
+    "crawler",
+    "web",
+    "url",
+    "link"
+  ],
   "author": "Ando",
   "license": "ISC",
   "dependencies": {
