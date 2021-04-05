@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Simple Web Crawler",
   "bin": {
-    "traverse": "./scripts/bin/traverse",
-    "traverse-stream": "./scripts/bin/traverse-stream"
+    "traverse": "./scripts/lib/traverse/index.js",
+    "traverse-stream": "./scripts/lib/traverse-stream/index.js"
   },
   "private": true,
   "scripts": {
