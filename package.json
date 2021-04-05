@@ -2,6 +2,7 @@
   "name": "hexact-task",
   "version": "1.0.0",
   "description": "Simple Web Crawler",
+  "main": "./scripts/lib/traverse/index.js",
   "bin": {
     "traverse": "./scripts/lib/traverse/index.js",
     "a": "./scripts/lib/traverseStream/index.js"
