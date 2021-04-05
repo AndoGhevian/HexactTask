@@ -35,6 +35,7 @@ async function getResource(urlNormObj, site, map) {
                         map.set(response.url, response.statusCode)
 
                         if (map.has(options.url.href)) {
+                            options.followRedirect = false
                             return redirectionInterrupted = true
                         }
 
